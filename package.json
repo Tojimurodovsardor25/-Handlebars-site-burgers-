@@ -1,0 +1,29 @@
+{
+  "name": "hbs_sayt_saqlash",
+  "version": "1.0.0",
+  "description": "Handlebars bilan 2-sayt ma'lumotlarni saqlash va o'chirish",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tojimurodovsardor25/hbs_sayt_saqlash.git"
+  },
+  "keywords": [],
+  "author": "sardortojimurodov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tojimurodovsardor25/hbs_sayt_saqlash/issues"
+  },
+  "homepage": "https://github.com/Tojimurodovsardor25/hbs_sayt_saqlash#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

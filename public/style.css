@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-flex{
+    margin: 0;
+    width: 461px;
+}
+
+.navbar-expand-lg{
+    width: 100%;
+}
+
+.free{
+    margin-top: 11vh;
+}
+
+.input-field input{
+    width: 40%;
+    height: 33px;
+    border: none;
+    border: 1px solid rgb(54, 54, 54);
+    margin: 9px;
+}
+
+.s12 button{
+    width: 100px;
+    height: 43px;
+    background: rgb(0, 74, 235);
+    color: #fff;
+}
