@@ -2,24 +2,26 @@
 <p>{{name}}</p>
 
 {{#if allPhones.length}}
-{{#each allPhones}}
-<div class="row">
-    <div class="col s6 offset-3">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{img}}" alt="jpg" />
-                <span class="card-title">{{name}}</span>
-            </div>
-            <div class="card-content">
-                <p>{{price}}</p>
-            </div>
-            <div class="card-action">
-                <a href="/delete/{{id}}">{{id}}</a>
+<div class="container">
+    <div class="row">
+        {{#each allPhones}}
+        <div class="col-5">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{img}}" alt="jpg" />
+                    <span class="card-title">{{name}}</span>
+                </div>
+                <div class="card-content">
+                    <p>{{price}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="/delete/{{id}}">{{id}}</a>
+                </div>
             </div>
         </div>
+        {{/each}}
     </div>
 </div>
-{{/each}}
 {{else}}
 <p>here is empty</p>
 {{/if}}

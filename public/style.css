@@ -1,23 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.d-flex{
+.d-flex {
     margin: 0;
     width: 461px;
 }
 
-.navbar-expand-lg{
+.navbar-expand-lg {
     width: 100%;
 }
 
-.free{
+.free {
     margin-top: 11vh;
 }
 
-.input-field input{
+.input-field input {
     width: 40%;
     height: 33px;
     border: none;
@@ -25,9 +25,24 @@
     margin: 9px;
 }
 
-.s12 button{
+.s12 button {
     width: 100px;
     height: 43px;
     background: rgb(0, 74, 235);
     color: #fff;
 }
+
+.card {
+    flex-direction: unset;
+    display: block;
+    width: 45vh;
+}
+
+.card-image{
+    padding: 27px;
+}
+
+.card-image img{
+    width: 100%;
+}
+
