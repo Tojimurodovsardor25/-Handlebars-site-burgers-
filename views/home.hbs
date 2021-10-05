@@ -1,27 +1,30 @@
-<h1>Helle from {{title}}</h1>
-<p>{{name}}</p>
-
 {{#if allPhones.length}}
-<div class="container">
-    <div class="row">
-        {{#each allPhones}}
-        <div class="col-5">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{img}}" alt="jpg" />
-                    <span class="card-title">{{name}}</span>
-                </div>
-                <div class="card-content">
-                    <p>{{price}}</p>
-                </div>
-                <div class="card-action">
-                    <a href="/delete/{{id}}">{{id}}</a>
-                </div>
+  <div class="container">
+    <div class="row backg">
+      <h1>Helle from {{title}}</h1>
+      <p>{{name}}</p>
+      {{#each allPhones}}
+        <div class="col-3">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{img}}" alt="jpg" />
+              <span class="card-title">{{name}}</span>
             </div>
+            <div class="card-content">
+              <p class="price">{{price}}</p>
+            </div>
+            <div class="card-action">
+              <a href="/delete/{{id}}">{{id}}</a>
+            </div>
+            <div class="card-action editbox">
+              <a href="/add/{{id}}">View Phone ></a>
+              <a href="/add/{{id}}/edit">Edit ></a>
+            </div>
+          </div>
         </div>
-        {{/each}}
+      {{/each}}
     </div>
-</div>
+  </div>
 {{else}}
-<p>here is empty</p>
+  <p>here is empty</p>
 {{/if}}
