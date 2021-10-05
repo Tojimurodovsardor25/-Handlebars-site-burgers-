@@ -1,20 +1,16 @@
 <div class="container">
   <form action="/add" method="POST">
-    <div class="row">
+    <div class="row blockrow">
       <div class="input-field col s12">
-        <input id="name" type="text" class="validate" name="name" />
+        <input id="name" type="text" class="validate" name="name" placeholder="name" />
       </div>
-    </div>
-    <div class="row">
       <div class="input-field col s12">
-        <input id="price" type="number" class="validate" name="price" />
+        <input id="price" type="number" class="validate" name="price" placeholder="price" />
       </div>
-    </div>
-    <div class="row">
       <div class="input-field col s12">
-        <input id="img" type="text" class="validate" name="img" />
+        <input id="img" type="text" class="validate" name="img" placeholder="img (url)" />
       </div>
+      <button type="submit" class="waves-effect waves-light btn">Send</button>
     </div>
-    <button type="submit" class="waves-effect waves-light btn">Send</button>
   </form>
 </div>

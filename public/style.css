@@ -35,14 +35,15 @@
 .card {
     flex-direction: unset;
     display: block;
-    width: 45vh;
+    width: 100%;
+    height: 436px;
     margin: 9px;
 }
 
 .card-image {
     padding: 27px;
     width: 100%;
-    height: 61vh;
+    height: 355px;
 }
 
 .card-image img {
@@ -80,15 +81,98 @@
 
 .card-action a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
+    color: black;
+    font-weight: 700;
 }
 
-.p-page{
+.p-page {
     width: 100%;
+    height: 699px;
 }
 
-.editbox{
+.editbox {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.aditrow {
+    display: block;
+    padding-top: 69px;
+}
+
+.aditrow .col-7 {
+    margin: auto;
+    background: rgb(228, 228, 228);
+    padding-top: 13px;
+    height: 325px;
+}
+
+.input-field input {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border: 2px solid rgb(194, 194, 194);
+}
+
+.input-field {
+    padding: 9px;
+}
+
+.waves-effect {
+    width: 99px;
+    height: 37px;
+    background: rgb(182, 182, 182);
+    margin-left: 11px;
+    margin-bottom: 11px;
+    font-family: monospace;
+    font-weight: 700;
+    margin-top: 44px;
+}
+
+.waves-effect:hover {
+    background: rgb(182, 182, 182);
+    box-shadow: 0 0 5px rgb(56, 121, 241);
+}
+
+.delate-click:hover {
+    background: rgb(182, 182, 182);
+    box-shadow: 0 0 5px rgb(56, 121, 241);
+}
+
+.p-img {
+    height: 61vh;
+}
+
+.delate-click {
+    width: 99px;
+    height: 37px;
+    background: rgb(182, 182, 182);
+    margin-left: 11px;
+    margin-bottom: 11px;
+    font-family: monospace;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.view-page {
+    margin: auto;
+}
+
+.row {
+    background: rgb(199, 199, 199);
+    margin: 0;
+}
+
+.blockrow {
+    display: block;
+    height: 55vh;
+}
+
+h1 {
+    border-bottom: 1px solid;
 }
