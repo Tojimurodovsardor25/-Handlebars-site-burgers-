@@ -1,0 +1,29 @@
+<h1>This is shopping card</h1>
+{{#if models.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>Model:</th>
+        <th>Count:</th>
+        <th>Price:</th>
+        <th>Boolean:</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each models}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{count}}</td>
+          <td>{{price}}</td>
+          <td>
+            <button type="submit">Delate</button>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <p><strong>Price:</strong> <span class="price">{{price}}</span></p>
+{{else}}
+  <p>Card is empty</p>
+{{/if}}
