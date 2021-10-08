@@ -7,5 +7,4 @@ router.get('/', (req, res) => {
         isNew: true
     })
 })
-
 module.exports = router

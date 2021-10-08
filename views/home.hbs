@@ -19,6 +19,10 @@
             <div class="card-action editbox">
               <a href="/add/{{id}}">View Phone ></a>
               <a href="/add/{{id}}/edit">Edit ></a>
+              <form action="/card/add" method="POST">
+                <input type="hidden" value="{{id}}" name="id" />
+                <button>Buy</button>
+              </form>
             </div>
           </div>
         </div>

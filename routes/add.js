@@ -10,7 +10,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  console.log(req.body.name);
   const phone = new Phone(req.body.name, req.body.price, req.body.img);
   await phone.save();
   res.redirect("/");
@@ -27,16 +26,17 @@ router.get("/:id/edit", async (req, res) => {
   });
 });
 
-router.post('/edit', async (req,res)=>{
-    await Phone.update(req.body)
+router.post("/edit", async (req, res) => {
+  await Phone.update(req.body);
 
-    res.redirect('/')
-})
+  res.redirect("/");
+});
 
 router.get("/:id", async (req, res) => {
   const phone = await Phone.getById(req.params.id);
 
   res.render("phone", {
+    layout: "phone",
     title: phone.name,
     price: phone.price,
     img: phone.img,
