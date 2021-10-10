@@ -2,34 +2,34 @@
 <div class="row">
   <div class="col-5 buy-col">
     {{#if models.length}}
-      <table>
-        <thead>
-          <tr>
-            <th>Model:</th>
-            <th>Count:</th>
-            <th>Price:</th>
-            <th>Boolean:</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each models}}
-            <tr>
-              <td>{{name}}</td>
-              <td>{{count}}</td>
-              <td>{{price}}</td>
-              <td>
-                <button type="submit">Delate</button>
-              </td>
-            </tr>
-          {{/each}}
-        </tbody>
-        <hr />
-      </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Model:</th>
+          <th>Count:</th>
+          <th>Price:</th>
+          <th>Boolean:</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each models}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{count}}</td>
+          <td>{{price}}</td>
+          <td>
+            <button type="submit">Delate</button>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
       <hr />
-      <p><strong>Price:</strong> <span class="price">{{price}}</span></p>
-      <hr>
+    </table>
+    <hr />
+    <p><strong>Price:</strong> <span class="price">{{price}}</span></p>
+    <hr>
     {{else}}
-      <p>Card is empty</p>
+    <p>Card is empty</p>
     {{/if}}
   </div>
 </div>

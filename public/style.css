@@ -49,6 +49,22 @@
     margin: 9px;
 }
 
+.big {
+    width: 55px;
+    height: 33px;
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+}
+
+.ddd {
+    width: 33px;
+    height: 33px;
+    background: #0e0e0e;
+}
+
 .card-image {
     padding: 27px;
     width: 100%;
@@ -209,14 +225,14 @@ th {
     color: #fff;
 }
 
-.container-fluid hr{
+.container-fluid hr {
     color: #fff;
 }
 
-.d-flex{
+.d-flex {
     margin-right: 11px;
 }
 
-.navbar-dark .navbar-brand{
+.navbar-dark .navbar-brand {
     margin-left: 11px;
 }
