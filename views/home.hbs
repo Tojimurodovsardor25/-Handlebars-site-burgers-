@@ -1,1043 +1,243 @@
 <!-- HEADER START -->
 <h1>{{title}}</h1>
 <header>
-    <div class="header__logo">
-        <div class="header__img">
-            <img class="header__img__item" src="img/h1.png" alt="png">
-            <h1>#соччный, мощщный</h1>
-        </div>
+  <div class="header__logo">
+    <div class="header__img">
+      <img class="header__img__item" src="img/h1.png" alt="png" />
+      <h1>#соччный, мощщный</h1>
     </div>
-    <div class="logo">
-        <a href="" class="logo__link">
-            <img class="logo__link__img" src="img/bsb-logo.png" alt="png">
-        </a>
-        <div class="music">
-            <h3><a href="/add">Add</a></h3>
-            <h4 class="music__text">Click and Enjoy __</h4>
-            <div class="music__icon">
-                <img class="music__icon-img" src="img/music.png" alt="png">
-            </div>
-        </div>
+  </div>
+  <div class="logo">
+    <a href="" class="logo__link">
+      <img class="logo__link__img" src="img/bsb-logo.png" alt="png" />
+    </a>
+    <div class="music">
+      <h3><a href="/add">Add</a></h3>
+      <h4 class="music__text">Click and Enjoy __</h4>
+      <div class="music__icon">
+        <img class="music__icon-img" src="img/music.png" alt="png" />
+      </div>
     </div>
-    <div class="shop">
-        <img src="img/food.png" alt="png" class="shop__img">
-        <span class="shop__number">0</span>
-        <ul class="shop__list">
-            <li class="shop__item item">
-                <p class="item__text">
-                    <span class="item__number">0</span> шт. / <span class="item__price">0</span> сум
-                </p>
-            </li>
-            <li class="shop__item">
-                <a href="#!" class="shop__pay">Оформить</a>
-                <a href="#!" class="shop__clear">Очистить</a>
-            </li>
-        </ul>
+  </div>
+  <div class="shop">
+    <img src="img/food.png" alt="png" class="shop__img" />
+    <span class="shop__number">0</span>
+    <ul class="shop__list">
+      <li class="shop__item item">
+        <p class="item__text">
+          <span class="item__number">0</span>
+          шт. /
+          <span class="item__price">0</span>
+          сум
+        </p>
+      </li>
+      <li class="shop__item">
+        <a href="#!" class="shop__pay">Оформить</a>
+        <a href="#!" class="shop__clear">Очистить</a>
+      </li>
+    </ul>
+  </div>
+  <div class="pig">
+    <span class="pig__img"></span>
+    МЫ НЕ ИСПОЛЬЗУЕМ
+    <br />
+    МЫ НЕ ИСПОЛЬЗУЕМ
+    <br />
+    (PORK FREE)
+  </div>
+  <div class="mouse">
+    <div class="m__body">
+      <div class="m__btn"></div>
     </div>
-    <div class="pig">
-        <span class="pig__img"></span>
-        МЫ НЕ ИСПОЛЬЗУЕМ <br>
-        МЫ НЕ ИСПОЛЬЗУЕМ <br>
-        (PORK FREE)
+    <div class="m__corner">
+      <span class="m__span"></span>
     </div>
-    <div class="mouse">
-        <div class="m__body">
-            <div class="m__btn"></div>
-        </div>
-        <div class="m__corner">
-            <span class="m__span"></span>
-        </div>
-    </div>
+  </div>
 </header>
 <!-- HEADER END -->
 
 <!-- BURGER START -->
 <section class="burger">
-    <div class="wrapper">
-        <div class="burger__menu">
-            <h2 class="burger__title">Меню</h2>
-            <div class="burger__description">
-                Мы готовим наши бургеры из 100% натуральной мраморной говядины породы (абердин блэк) ангус без гормонов
-                и
-                антибиотиков, качество гарантировано группой компаний "Заречное", поставляющей для нас фарш из мраморной
-                говядины под брендом "Праймбиф". Наша прожарка Medium well.
-            </div>
-        </div>
-
-        <!-- FIRST STANDART START -->
-        <div class="products" id="stdr">
-            <h3 class="products__title">Бургеры - Стандартные</h3>
-            <div class="product__box">
-                {{#if allBurger.lenght}}
-                {{#each allBurger}}
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="{{img}}" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="gam">{{title}}</h5>
-                            <p class="card__text">Булочка белая, кетчуп, огурцы маринованные, лук маринованный, котлета
-                                говяжья,
-                                соус
-                                1000 островов.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">{{price}}</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn" data-price="19999">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-                {{else}}
-                <p> here is empty</p>
-                {{/if}}
-                {{!-- <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burger2.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="fish">Фиш бургер</h5>
-                            <p class="card__text">Булочка белая, cоус гавайский, латук, соус бабагануш, рыбная котлета.
-                            </p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">22000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burger3.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="chiz">Чизбургер</h5>
-                            <p class="card__text">Булочка белая, кетчуп, салат айсберг, огурцы маринованные, лук
-                                маринованный,
-                                котлета говяжья, сыр чеддер, соус 1000 островов.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">25000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burger4.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="kla">Классика</h5>
-                            <p class="card__text">Булочка белая, cоус 1000 островов, cалат айсберг, помидоры, огурцы
-                                маринованные,
-                                котлета говяжья, сыр чеддер, кетчуп.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">26000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burger5.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="chizbb">Чизбургер BBQ</h5>
-                            <p class="card__text">Булочка белая, кетчуп-барбекю, огурцы маринованные, котлета говяжья,
-                                сыр чеддер,
-                                лук жаренный.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">26000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burger6.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="tash">Ташкент Слоу</h5>
-                            <p class="card__text">Булочка белая,говяжья котлета,cоус техаский, cалат коул-слоу из двух
-                                видов
-                                капусты, oгурцы маринованные, маринованный лук красный, сыр чеддер.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">27000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
-        </div>
-        <!-- FIRST STANDART END -->
-
-        <!-- SECOND XL START -->
-        <div class="products" id="xl">
-            <h3 class="products__title">Бургеры XL</h3>
-            <div class="product__box">
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl1">Бургер Гавайский с ананасами XL</h5>
-                            <p class="card__text">В цену включена упаковка стоимостью 2000 сум. Состав:Белая булочка,
-                                Котлета
-                                говяжья (Prime Beef), Обжареный ананас, Соус "Гавайский", Салатный лист латук, Лук
-                                красный
-                                (маринованый), Огурцы маринованые, Сыр моцарелла.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">55000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                {{!-- <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL2.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl2">Фиш бургер XL</h5>
-                            <p class="card__text">Булочка белая, соус гавайский, латук, соус бабагануш, рыбная котлета.
-                            </p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">68000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL3.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl3">Бургер XL BBQ</h5>
-                            <p class="card__text">Булочка черная, огурцы маринованные, сыр чеддер, лук жареный,
-                                кетчуп-барбекю.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">41000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL4.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl4">Классика XL</h5>
-                            <p class="card__text">Булочка белая, cоус 1000 островов, латук, помидоры, огурцы
-                                маринованные, лук
-                                красный маринованный, сыр чеддер.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">45000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL5.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl5">Грибной XL</h5>
-                            <p class="card__text">Булочка черная, cоус 1000 островов, латук, помидоры, огурцы
-                                маринованные, лук
-                                красный маринованный, грибы в соусе демиглас, сыр моцарелла.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">49500</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL6.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl6">Ташкент Слоу XL</h5>
-                            <p class="card__text">Булочка белая, cоус техаский, cалат коул-слоу, капуста, oгурцы
-                                маринованные, лук
-                                красный, сыр чеддер,котлета говяжья.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">51000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL7.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl7">Итальянский XL</h5>
-                            <p class="card__text">Булочка белая, соус 1000 островов, латук, помидоры, сыр Пармезан,
-                                салат айсберг,
-                                соус Цезарь, сыр Моцарелла.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">54000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL8.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl8">Самый вкусный бургер XL</h5>
-                            <p class="card__text">Булочка белая, cоус крем-унаги, латук, айсберг, помидоры, огурцы
-                                маринованные, лук
-                                маринованный, котлета говяжья, сыр чеддер, сыр моцарелла, соус крем-барбекю. </p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">66000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card"> --}}
-                    {{!-- <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/burgerXL9.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="xl9">VIP 13 XL </h5>
-                            <p class="card__text">Булочка черная, соус гавайский, латук, лук красный маринованный,
-                                помидоры, соус
-                                релиш, сыр чеддер, жаренные грибы в соусе демиглас, 2 говяжьи котлеты, фета, cоус 1000
-                                островов, джем
-                                смородина, карамелизованная груша с корицей.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">106000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
-        <!-- SECOND XL END -->
-
-        <!-- THIRD FREE START -->
-        <div class="products" id="add">
-            <h3 class="products__title">Закуски</h3>
-            <div class="product__box">
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/free1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="free1">Сырные шарики</h5>
-                            <p class="card__text">4 шт. В цену включена упаковка стоимостью 1000 сум.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">21000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                {{!-- <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/free2.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="free2">Картофель фри Больщой</h5>
-                            <p class="card__text">Картофель фри Больщой.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">21000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/action.jpg" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/free3.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="free3">Картофель фри Стандарт</h5>
-                            <p class="card__text">Картофель фри Стандарт.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">15000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/free4.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="free4">Картофельные дольки Больщой</h5>
-                            <p class="card__text">Картофельные дольки Больщой.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">22000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/free5.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="free5">Картофельные дольки Стандартный</h5>
-                            <p class="card__text">Картофельные дольки Стандартный.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">18000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/free6.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="free6">Куринные Наггетсы 12 шт</h5>
-                            <p class="card__text">Куринные Наггетсы 12 шт.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">36500</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
-        </div>
-        <!-- THIRD FREE END -->
-
-        <!-- FOURTH SALAT START -->
-        <div class="products" id="salat">
-            <h3 class="products__title">Салаты</h3>
-            <div class="product__box">
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/salat1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="salat1">Салат Коул слоу</h5>
-                            <p class="card__text">Капуста (2вида) Соус коул слоу Кондитерский мак Красная морковка.</p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">13000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                {{!-- <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/salat2.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="salat2">Цезарь с курицей</h5>
-                            <p class="card__text">Салат айсберг Помидоры Сухарики Сыр Пармезан Куриное филе Соус цезарь.
-                            </p>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">25000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
-        </div>
-        <!-- FOURTH SALAT END -->
-
-        <!-- FIFTH SOUS START -->
-        <div class="products" id="sous">
-            <h3 class="products__title">Соусы</h3>
-            <div class="product__box">
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/sous1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="sous1">На слабо</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">10000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                {{!-- <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/sous1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="sous2">Фирменный</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">6000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/sous1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="sous3">Чесночный</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">6000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/action.jpg" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/sous1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="sous4">Горчичный</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">7000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/std.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/sous1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="sous5">Сырный Халапеньо</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">12000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" src="img/xl.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/sous1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="sous6">BBQ</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">6000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
-        </div>
-        <!-- FIFTH SOUS END -->
-
-        <!-- SIXTH DRINK START -->
-        <div class="products" id="drink1">
-            <h3 class="products__title">Напитки</h3>
-            <div class="product__box">
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink4.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink1">«Ванильный» 400мл.</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">20500</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                {{!-- <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink5.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink2">«Клубничный» 400мл.</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">20500</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink6.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink3">«Шоколадный» 400мл.</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">20500</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink7.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink4">«Ягодный» 400мл.</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">24500</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink8.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink5">«Манго-имбирный» 400мл.</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">24500</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                        <div class="card__labels label">
-                            <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
-                        </div>
-                    </div>
-                </div> --}}
-
-            </div>
-        </div>
-        <!-- SIXTH DRINK END -->
-
-        <!-- SEVENTH DRINK START -->
-        <div class="products" id="drink2">
-            <h3 class="products__title">Напитки</h3>
-            <div class="product__box">
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink1.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink6">Минеральная вода б/г</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">8000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                    </div>
-                </div>
-                {{!-- <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink2.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink7">Мохито BSB</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">12000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__body">
-                        <div class="card__aside">
-                            <img class="card__img" src="img/drink3.jpg" alt="jpg">
-                        </div>
-                        <div class="card__header">
-                            <h5 class="card__name" data-name="drink8">Мохито BSB</h5>
-                        </div>
-                        <div class="card__actions">
-                            <div class="card__price">
-                                <span class="amount">12000</span>
-                                <span class="currency">сум</span>
-                            </div>
-                            <button class="card__btn">Купить</button>
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
-        </div>
-        <!-- SEVENTH DRINK END -->
-
-        <!-- MODAL START -->
-        <div class="modal">
-            <div class="modal__content">
-                <div class="modal__top">
-                    <img class="top__img" src="img/burger1.jpg" alt="jpg">
-                </div>
-                <div class="modal__bottom bottom">
-                    <div class="bottom__left">
-                        <div class="card__name modal__name">Гамбургер</div>
-                        <span class="attr" style="display: none;"></span>
-                        <div class="card__price modal__price">
-                            <span class="amount modal__amount">19 999 </span>
-                            <span class="currency">сум</span>
-                        </div>
-                        <div class="modal__quantity quantity">
-                            <span class="modal__span">Количество:</span>
-                            <div class="quantity__block">
-                                <button class="quantity__minus">-</button>
-                                <span class="quantity__show">1</span>
-                                <button class="quantity__pilus">+</button>
-                            </div>
-                        </div>
-                        <div class="modal__quantity pay">
-                            <span class="modal__span">Всего:</span>
-                            <div class="pay__right">
-                                <span class="pay__amount">19 999</span>
-                                <span class="currency">сум</span>
-                            </div>
-                        </div>
-                        <div class="modal__action">
-                            <button class="modal__btn">Купить</button>
-                        </div>
-
-                    </div>
-                    <div class="bottom__right">
-                        <img class="bottom__img" src="img/about.jpg" alt="jpg">
-                    </div>
-                </div>
-                <span class="modal__close"></span>
-            </div>
-        </div>
-        <!-- MODAL END -->
-
+  <div class="wrapper">
+    <div class="burger__menu">
+      <h2 class="burger__title">Меню</h2>
+      <div class="burger__description">
+        Мы готовим наши бургеры из 100% натуральной мраморной говядины породы
+        (абердин блэк) ангус без гормонов и антибиотиков, качество гарантировано
+        группой компаний "Заречное", поставляющей для нас фарш из мраморной
+        говядины под брендом "Праймбиф". Наша прожарка Medium well.
+      </div>
     </div>
+
+    <!-- FIRST STANDART START -->
+    <div class="products" id="stdr">
+      <h3 class="products__title">Бургеры - Стандартные</h3>
+      <div class="product__box">
+        {{#if allBurgers.length}}
+          {{#each allBurgers}}
+            <div class="card">
+              <div class="card__body">
+                <div class="card__aside">
+                  <img class="card__img" src="{{img}}" alt="jpg" />
+                </div>
+                <div class="card__header">
+                  <h5 class="card__name" data-name="gam">{{name}}</h5>
+                  <p class="card__text">Булочка белая, кетчуп, огурцы
+                    маринованные, лук маринованный, котлета говяжья, соус 1000
+                    островов.</p>
+                </div>
+                <div class="card__actions">
+                  <div class="card__price">
+                    <span class="amount">{{price}}</span>
+                    <span class="currency">сум</span>
+                  </div>
+                  <button class="card__btn" data-price="19999">Купить</button>
+                </div>
+                <div class="card__labels label">
+                  <img class="label__img" src="img/std.png" alt="png" />
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        {{else}}
+          <p> here is empty</p>
+        {{/if}}
+      </div>
+    </div>
+    <!-- MODAL START -->
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__top">
+          <img class="top__img" src="img/burger1.jpg" alt="jpg" />
+        </div>
+        <div class="modal__bottom bottom">
+          <div class="bottom__left">
+            <div class="card__name modal__name">Гамбургер</div>
+            <span class="attr" style="display: none;"></span>
+            <div class="card__price modal__price">
+              <span class="amount modal__amount">19 999 </span>
+              <span class="currency">сум</span>
+            </div>
+            <div class="modal__quantity quantity">
+              <span class="modal__span">Количество:</span>
+              <div class="quantity__block">
+                <button class="quantity__minus">-</button>
+                <span class="quantity__show">1</span>
+                <button class="quantity__pilus">+</button>
+              </div>
+            </div>
+            <div class="modal__quantity pay">
+              <span class="modal__span">Всего:</span>
+              <div class="pay__right">
+                <span class="pay__amount">19 999</span>
+                <span class="currency">сум</span>
+              </div>
+            </div>
+            <div class="modal__action">
+              <button class="modal__btn">Купить</button>
+            </div>
+
+          </div>
+          <div class="bottom__right">
+            <img class="bottom__img" src="img/about.jpg" alt="jpg" />
+          </div>
+        </div>
+        <span class="modal__close"></span>
+      </div>
+    </div>
+    <!-- MODAL END -->
+
+  </div>
 </section>
 <!-- BURGER END -->
 
 <!-- PAYMENT START -->
 <section class="payment">
-    <div class="payment__card">
-        <h3 class="payment__header">Ваш заказ</h3>
-        <ul class="payment__menu">
-            <li class="payment__menu-item">Название товара</li>
-            <li class="payment__menu-item">Количество</li>
-            <li class="payment__menu-item">Цена</li>
+  <div class="payment__card">
+    <h3 class="payment__header">Ваш заказ</h3>
+    <ul class="payment__menu">
+      <li class="payment__menu-item">Название товара</li>
+      <li class="payment__menu-item">Количество</li>
+      <li class="payment__menu-item">Цена</li>
+    </ul>
+    <ul class="payment__card-products">
+      <li class="payment__card-list">
+        <ul class="payment__card-namebox namebox">
+          <li class="namebox__item">Гамбургер</li>
+          <li class="namebox__item">Фиш бургер</li>
+          <li class="namebox__item">Чизбургер</li>
         </ul>
-        <ul class="payment__card-products">
-            <li class="payment__card-list">
-                <ul class="payment__card-namebox namebox">
-                    <li class="namebox__item">Гамбургер</li>
-                    <li class="namebox__item">Фиш бургер</li>
-                    <li class="namebox__item">Чизбургер</li>
-                </ul>
-            </li>
-            <li class="payment__card-list">
-                <ul class="payment__card-count count">
-                    <li class="count__box">
-                        1
-                    </li>
-                    <li class="count__box">
-                        1
-                    </li>
-                    <li class="count__box">
-                        1
-                    </li>
-                </ul>
-            </li>
-            <li class="payment__card-list">
-                <ul class="products__list-price">
-                    <li class="products__list-amount amountbox"><span class="amountbox__item">20000</span> <span
-                            class="amount__currency">
-                            сум</span>
-                    </li>
-                    <li class="products__list-amount amountbox"><span class="amountbox__item">22000</span> <span
-                            class="amount__currency">
-                            сум</span>
-                    </li>
-                    <li class="products__list-amount amountbox"><span class="amountbox__item">25000</span> <span
-                            class="amount__currency">
-                            сум</span>
-                    </li>
-                </ul>
-            </li>
+      </li>
+      <li class="payment__card-list">
+        <ul class="payment__card-count count">
+          <li class="count__box">
+            1
+          </li>
+          <li class="count__box">
+            1
+          </li>
+          <li class="count__box">
+            1
+          </li>
         </ul>
-        <div class="payment__all">
-            <div class="payment__all-box">
-                <span class="payment__all-item">Всего:</span>
-                <span class="payment__all-item">Доставка:</span>
-            </div>
-            <div class="payment__all-price">
-                <div class="payment__all-total">
-                    <span class="payment__all-span">0</span>
-                    <span class="amount__currency">сум</span>
-                </div>
-                <div class="payment__all-delivery">
-                    <span class="delivery">30000</span>
-                    <span class="amount__currency">сум</span>
-                </div>
-            </div>
+      </li>
+      <li class="payment__card-list">
+        <ul class="products__list-price">
+          <li class="products__list-amount amountbox"><span
+              class="amountbox__item"
+            >20000</span>
+            <span class="amount__currency">
+              сум</span>
+          </li>
+          <li class="products__list-amount amountbox"><span
+              class="amountbox__item"
+            >22000</span>
+            <span class="amount__currency">
+              сум</span>
+          </li>
+          <li class="products__list-amount amountbox"><span
+              class="amountbox__item"
+            >25000</span>
+            <span class="amount__currency">
+              сум</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="payment__all">
+      <div class="payment__all-box">
+        <span class="payment__all-item">Всего:</span>
+        <span class="payment__all-item">Доставка:</span>
+      </div>
+      <div class="payment__all-price">
+        <div class="payment__all-total">
+          <span class="payment__all-span">0</span>
+          <span class="amount__currency">сум</span>
         </div>
-        <div class="payment__total">
-            <span class="payment__total-span">Итого:</span>
-            <div class="payment__total-box">
-                <span class="payment__total-price">0</span>
-                <span class="payment__total-currency">сум</span>
-            </div>
+        <div class="payment__all-delivery">
+          <span class="delivery">30000</span>
+          <span class="amount__currency">сум</span>
         </div>
-        <h5 class="thanks">Спасибо за покупку</h5>
-        <div class="payment__btns">
-            <button class="pay__btn"><img class="pay__btn__img" src="img/Metro-Loading-32.png" alt="png"> <span
-                    class="pay__btn__span">оплатить</span></button>
-            <button class="back__btn">назад</button>
-            <a href="index.html" id="menu" style="display: none;">Меню</a>
-        </div>
+      </div>
     </div>
+    <div class="payment__total">
+      <span class="payment__total-span">Итого:</span>
+      <div class="payment__total-box">
+        <span class="payment__total-price">0</span>
+        <span class="payment__total-currency">сум</span>
+      </div>
+    </div>
+    <h5 class="thanks">Спасибо за покупку</h5>
+    <div class="payment__btns">
+      <button class="pay__btn"><img
+          class="pay__btn__img"
+          src="img/Metro-Loading-32.png"
+          alt="png"
+        />
+        <span class="pay__btn__span">оплатить</span></button>
+      <button class="back__btn">назад</button>
+      <a href="index.html" id="menu" style="display: none;">Меню</a>
+    </div>
+  </div>
 </section>
 <!-- PAYMENT END -->

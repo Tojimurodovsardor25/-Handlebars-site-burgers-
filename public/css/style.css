@@ -290,7 +290,7 @@ h1 {
 }
 
 .card__aside {
-  border-top: 2px solid #b63344;
+  height: 336px;
 }
 
 .card__img {
