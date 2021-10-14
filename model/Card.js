@@ -1,5 +1,8 @@
 const path = require("path");
 const fs = require("fs");
+const {
+  resolve
+} = require("path");
 
 const p = path.join(
   path.dirname(process.mainModule.filename),
@@ -8,22 +11,22 @@ const p = path.join(
 );
 
 class Card {
-  static async add(phone) {
+  static async add(burger) {
     const card = await Card.fetch();
-    const idx = card.phones.findIndex((c) => c.id === phone.id); // number // 0
+    const idx = card.burgers.findIndex((c) => c.id === phone.id); // number // 0
 
-    const candidate = card.phones[idx]; // 13
+    const candidate = card.burgers[idx]; // 13
 
     if (candidate) {
       /// Bu telefon karzinada mavjud
       candidate.count++; // qo'shish
-      card.phones[idx] = candidate;
+      card.burgers[idx] = candidate;
     } else {
-      phone.count = 1;
-      card.phones.push(phone);
+      burger.count = 1;
+      card.burgers.push(burger);
     }
 
-    card.price += +phone.price;
+    card.price += +burger.price;
 
     return new Promise((resolve, reject) => {
       fs.writeFile(p, JSON.stringify(card), (err) => {
@@ -34,6 +37,28 @@ class Card {
         }
       });
     });
+  }
+
+  static async remove(id) {
+    const card = await Card.fetch()
+    const idx = card.burgers.findIndex(burger => burger.id === id)
+    const burger = card.burgers[idx]
+
+    if (burger.count === 1) {
+      card.burgers = card.burgers.filter(burger => burger.id !== id)
+    } else {
+      card.burgers[idx].count--
+    }
+    card.price -= burger.price
+    return new Promise((resolve, reject) => {
+      fs.writeFile(p, JSON.stringify(card), (err) => {
+        if (err) {
+          reject(err)
+        } else {
+          resolve(card)
+        }
+      })
+    })
   }
 
   static async fetch() {

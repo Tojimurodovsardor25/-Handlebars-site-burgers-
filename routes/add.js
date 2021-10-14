@@ -19,12 +19,13 @@ router.get("/:id/edit", async (req, res) => {
   const burger = await Burger.getById(req.params.id);
 
   res.render("edit", {
-    name: burger.name,
     price: burger.price,
     img: burger.img,
     id: burger.id,
   });
 });
+
+
 
 router.post("/edit", async (req, res) => {
   await Burger.update(req.body);
@@ -37,7 +38,6 @@ router.get("/:id", async (req, res) => {
 
   res.render("burger", {
     layout: "burger",
-    title: burger.name,
     price: burger.price,
     img: burger.img,
     id: burger.id,

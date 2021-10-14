@@ -1,6 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-const { v4: uuid } = require('uuid')
+const {
+    v4: uuid
+} = require('uuid')
 
 class Burger {
     constructor(name, price, img) {
@@ -57,12 +59,12 @@ class Burger {
 
         return new Promise((resolve, reject) => {
             fs.writeFile(
-                path.join(__dirname,'..','data', 'db.json'),
+                path.join(__dirname, '..', 'data', 'db.json'),
                 JSON.stringify(burgers),
-                (err)=>{
-                    if(err){
+                (err) => {
+                    if (err) {
                         reject(err)
-                    }else{
+                    } else {
                         resolve()
                     }
                 }

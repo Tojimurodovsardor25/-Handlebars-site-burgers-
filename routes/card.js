@@ -1,4 +1,6 @@
-const { Router } = require('express')
+const {
+    Router
+} = require('express')
 const router = Router()
 const Burger = require('../model/Burger')
 const Card = require('../model/Card')
@@ -10,18 +12,18 @@ router.post('/add', async (req, res) => {
 })
 
 router.delete('/remove/:id', async (req, res) => {
-    const card = await Card.remove(req.body.id)
+    const card = await Card.remove(req.params.id)
     res.status(200).json(card)
 })
 
 router.get('/add', async (req, res) => {
     const card = await Card.fetch()
-    res.render(card), {
-        title: 'Shopping new card',
-        models: card.phones,
+    res.render('card', {
+        title: 'Shopping card',
+        models: card.burgers, /// massiv
         price: card.price,
         isCard: true
-    }
+    })
 })
 
 module.exports = router
