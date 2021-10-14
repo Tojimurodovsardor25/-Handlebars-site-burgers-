@@ -1,14 +1,14 @@
 const express = require('express')
 const router = express()
-const Phone = require('../model/Phone')
+const Burger = require('../model/Burger')
 
 router.get('/', async (req, res) => {
-    const allPhones = await Phone.getAll()
+    const allBurger = await Burger.getAll()
 
     res.render('home', {
         title: 'Home',
         isHome: true,
-        allPhones
+        allBurger
     })
 })
 

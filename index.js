@@ -16,6 +16,7 @@ const hbs = exphbs.create({
 const homeRouter = require('./routes/home')
 const addRouter = require('./routes/add')
 const cardRouter = require('./routes/card')
+const registrRouter = require('./routes/registr')
 
 app.use(express.urlencoded({ extended: true }))
 
@@ -26,6 +27,7 @@ app.set('views', 'views')
 app.use('/', homeRouter)
 app.use('/add', addRouter)
 app.use('/card', cardRouter)
+app.use('/registr', registrRouter)
 
 app.listen(port, () => {
     console.log(`Express working on ${port} port`);

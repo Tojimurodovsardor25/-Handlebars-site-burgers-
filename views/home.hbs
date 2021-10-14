@@ -12,6 +12,7 @@
             <img class="logo__link__img" src="img/bsb-logo.png" alt="png">
         </a>
         <div class="music">
+            <h3><a href="/add">Add</a></h3>
             <h4 class="music__text">Click and Enjoy __</h4>
             <div class="music__icon">
                 <img class="music__icon-img" src="img/music.png" alt="png">
@@ -67,13 +68,15 @@
         <div class="products" id="stdr">
             <h3 class="products__title">Бургеры - Стандартные</h3>
             <div class="product__box">
+                {{#if allBurger.lenght}}
+                {{#each allBurger}}
                 <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/burger1.jpg" alt="jpg">
                         </div>
                         <div class="card__header">
-                            <h5 class="card__name" data-name="gam">Гамбургер</h5>
+                            <h5 class="card__name" data-name="gam">{{title}}</h5>
                             <p class="card__text">Булочка белая, кетчуп, огурцы маринованные, лук маринованный, котлета
                                 говяжья,
                                 соус
@@ -81,7 +84,7 @@
                         </div>
                         <div class="card__actions">
                             <div class="card__price">
-                                <span class="amount">20000</span>
+                                <span class="amount">{{price}}</span>
                                 <span class="currency">сум</span>
                             </div>
                             <button class="card__btn" data-price="19999">Купить</button>
@@ -91,7 +94,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                {{/each}}
+                {{else}}
+                <p> here is empty</p>
+                {{/if}}
+                {{!-- <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/burger2.jpg" alt="jpg">
@@ -204,7 +211,7 @@
                             <img class="label__img" src="img/std.png" alt="png">
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- FIRST STANDART END -->
@@ -238,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                {{!-- <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/burgerXL2.jpg" alt="jpg">
@@ -397,8 +404,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card__body">
+                <div class="card"> --}}
+                    {{!-- <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/burgerXL9.jpg" alt="jpg">
                         </div>
@@ -420,7 +427,7 @@
                         <div class="card__labels label">
                             <img class="label__img" src="img/xl.png" alt="png">
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -451,7 +458,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                {{!-- <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/free2.jpg" alt="jpg">
@@ -555,7 +562,7 @@
                             <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- THIRD FREE END -->
@@ -585,7 +592,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                {{!-- <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/salat2.jpg" alt="jpg">
@@ -606,7 +613,7 @@
                             <img class="label__img" src="img/std.png" alt="png">
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- FOURTH SALAT END -->
@@ -635,7 +642,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                {{!-- <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/sous1.jpg" alt="jpg">
@@ -734,7 +741,7 @@
                             <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- FIFTH SOUS END -->
@@ -763,7 +770,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                {{!-- <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/drink5.jpg" alt="jpg">
@@ -842,7 +849,7 @@
                             <img class="label__img" style="width: 80%;" src="img/new.png" alt="png">
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>
@@ -869,7 +876,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                {{!-- <div class="card">
                     <div class="card__body">
                         <div class="card__aside">
                             <img class="card__img" src="img/drink2.jpg" alt="jpg">
@@ -902,7 +909,7 @@
                             <button class="card__btn">Купить</button>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- SEVENTH DRINK END -->

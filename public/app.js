@@ -17,3 +17,16 @@
 //     }
 
 // });
+
+// const buttonLogin = document.querySelector('.button-login')
+// const loginInput1 = document.querySelector('#login-input1')
+// const loginInput2 = document.querySelector('#login-input2')
+// const loginForm = document.querySelector('#login-form')
+// console.log(buttonLogin,loginInput1,loginInput2,loginForm);
+
+// loginForm.addEventListener('click', () => {
+//     if(loginInput2 === ''){
+//         console.log('msg');
+//     }
+// })
+

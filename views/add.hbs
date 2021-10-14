@@ -1,16 +1,35 @@
-<div class="container">
-  <form action="/add" method="POST">
-    <div class="row blockrow">
-      <div class="input-field col s12">
-        <input id="name" type="text" class="validate" name="name" placeholder="name" />
-      </div>
-      <div class="input-field col s12">
-        <input id="price" type="number" class="validate" name="price" placeholder="price" />
-      </div>
-      <div class="input-field col s12">
-        <input id="img" type="text" class="validate" name="img" placeholder="img (url)" />
-      </div>
-      <button type="submit" class="waves-effect waves-light btn">Send</button>
+{{!-- <div class="container">
+  <div class="row">
+    <div class="col-5 m-auto">
+      <h5>Login</h5>
+      <form action="" id="login-form">
+        <input type="email" placeholder="Email" id="login-input1">
+        <input type="text" placeholder="Parol" id="login-input2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deleniti repudiandae odit! Accusantium est
+          dignissimos repellat eius?</p>
+        <input type="checkbox">
+        <button type="submit" class="button-login">Button</button>
+      </form>
     </div>
-  </form>
+  </div>
+</div> --}}
+
+
+<div class="row">
+  <div class="col-6 m-auto">
+    <form action="/add" method="POST">
+      <div class="row blockrow">
+        <div class="input-field ">
+          <input id="name" type="text" class="validate" name="name" placeholder="name" />
+        </div>
+        <div class="input-field ">
+          <input id="price" type="number" class="validate" name="price" placeholder="price" />
+        </div>
+        <div class="input-field ">
+          <input id="img" type="text" class="validate" name="img" placeholder="img (url)" />
+        </div>
+        <button type="submit" class="waves-effect">Send</button>
+      </div>
+    </form>
+  </div>
 </div>

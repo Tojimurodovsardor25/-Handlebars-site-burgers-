@@ -739,6 +739,7 @@ footer {
 /* MEDIA START */
 /* XL 1200 <= */
 @media (max-width: 1400px) {
+
   /* HEADER START */
   h1 {
     font-size: 70px;
@@ -804,6 +805,7 @@ footer {
 
 /* LG 992 <= 1199 */
 @media (max-width: 1199px) {
+
   /* HEADER START */
   .music__icon {
     width: 80px;
@@ -927,6 +929,7 @@ footer {
 
 /* MD 768 <= 991 */
 @media (max-width: 991px) {
+
   /* HEADER START */
   .header__logo {
     padding-top: 18%;
@@ -1075,6 +1078,7 @@ footer {
 
 /* SM 576 <= 767 */
 @media (max-width: 767px) {
+
   /* HEADER START */
   .header__logo {
     padding-top: 35%;
@@ -1470,6 +1474,50 @@ footer {
   footer {
     padding: 35px 0;
   }
+}
+
+.row .m-auto {
+  margin-top: 25vh !important;
+  background: rgb(236, 236, 236);
+  height: 259px;
+  border-radius: 17px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.row .m-auto h5 {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: monospace;
+  color: #434244;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+.row .m-auto h6 {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: monospace;
+  color: #434244;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.validate{
+  width: 71%;
+}
+
+.row .blockrow{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waves-effect{
+  background-color: azure;
+  border-radius: 5px;
+  border: 1px solid;
+  width: 65px;
 }
 
 /* MEDIA END */
