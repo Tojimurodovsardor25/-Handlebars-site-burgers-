@@ -3,10 +3,11 @@ const path = require('path')
 const { v4: uuid } = require('uuid')
 
 class Burger {
-    constructor(name, price, img) {
+    constructor(name, price, img, title) {
         this.name = name
         this.price = price
         this.img = img
+        this.title = title
         this.id = uuid()
     }
 
@@ -15,6 +16,7 @@ class Burger {
             name: this.name,
             price: this.price,
             img: this.img,
+            title: this.title,
             id: this.id
         })
     }

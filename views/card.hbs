@@ -1,35 +1,37 @@
 <h1>This is shopping card</h1>
-<div class="row">
-  <div class="col-5 buy-col">
-    {{#if models.length}}
+
+<div id="card">
+  {{#if models.length}}
     <table>
       <thead>
         <tr>
-          <th>Model:</th>
-          <th>Count:</th>
-          <th>Price:</th>
-          <th>Boolean:</th>
+          <th>Model: </th>
+          <th>Count: </th>
+          <th>Price: </th>
+          <th>Boolean: </th>
         </tr>
       </thead>
+
       <tbody>
         {{#each models}}
-        <tr>
-          <td>{{name}}</td>
-          <td>{{count}}</td>
-          <td>{{price}}</td>
-          <td>
-            <button type="submit">Delate</button>
-          </td>
-        </tr>
+          <tr>
+            <td>{{name}}</td>
+            <td>{{count}}</td>
+            <td>{{price}}</td>
+            <td>
+              <button
+                type="submit"
+                class="btn btn-danger js-remove"
+                data-id="{{id}}"
+              >Delete</button>
+            </td>
+          </tr>
         {{/each}}
       </tbody>
-      <hr />
     </table>
-    <hr />
-    <p><strong>Price:</strong> <span class="price">{{price}}</span></p>
-    <hr>
-    {{else}}
+
+    <p><strong>Price: </strong> <span class="price">{{price}}</span></p>
+  {{else}}
     <p>Card is empty</p>
-    {{/if}}
-  </div>
+  {{/if}}
 </div>

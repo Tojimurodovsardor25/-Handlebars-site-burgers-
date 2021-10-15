@@ -92,6 +92,7 @@ $(document).ready(function () {
     const $music2 = $('#music2');
     const $musicImg = $('.music__icon-img');
     const $musicText = $('.music__text');
+    console.log($mQuantity);
     $musicBtn.on('click', function () {
         $music1[0].play();
         $musicText.hide(1000);

@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const burger = new Phone(req.body.name, req.body.price, req.body.img)
+    const burger = new Phone(req.body.name, req.body.price, req.body.img, req.body.title)
     await burger.save()
     res.redirect('/')
 })
@@ -23,6 +23,7 @@ router.get('/:id/edit', async (req, res) => {
         name: burger.name,
         price: burger.price,
         img: burger.img,
+        title: burger.title,
         id: burger.id
     })
 })
@@ -39,9 +40,10 @@ router.get('/:id', async (req, res) => {
 
     res.render('burger', {
         layout: 'burger',
-        title: burger.name,
+        name: burger.name,
         price: burger.price,
         img: burger.img,
+        title: burger.title,
         id: burger.id
     })
 })

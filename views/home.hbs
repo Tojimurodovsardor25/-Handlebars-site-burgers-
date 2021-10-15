@@ -26,7 +26,7 @@
       <li class="shop__item item">
         <p class="item__text">
           <span class="item__number">0</span>
-          шт. /
+          шт.
           <span class="item__price">0</span>
           сум
         </p>
@@ -74,78 +74,81 @@
       <h3 class="products__title">Бургеры - Стандартные</h3>
       <div class="product__box">
         {{#if allBurgers.length}}
-          {{#each allBurgers}}
-            <div class="card">
-              <div class="card__body">
-                <div class="card__aside">
-                  <img class="card__img" src="{{img}}" alt="jpg" />
-                </div>
-                <div class="card__header">
-                  <h5 class="card__name" data-name="gam">{{name}}</h5>
-                  <p class="card__text">Булочка белая, кетчуп, огурцы
-                    маринованные, лук маринованный, котлета говяжья, соус 1000
-                    островов.</p>
-                </div>
-                <div class="card__actions">
-                  <div class="card__price">
-                    <span class="amount">{{price}}</span>
-                    <span class="currency">сум</span>
-                  </div>
-                  <button class="card__btn" data-price="19999">Купить</button>
-                </div>
-                <div class="card__labels label">
-                  <img class="label__img" src="img/std.png" alt="png" />
-                </div>
+        {{#each allBurgers}}
+        <div class="card">
+          <div class="card__body">
+            <div class="card__aside">
+              <img class="card__img" src="{{img}}" alt="jpg" />
+            </div>
+            <div class="card__header">
+              <h5 class="card__name" data-name="gam">{{name}}</h5>
+              <p class="card__text">{{title}}</p>
+            </div>
+            <div class="card__actions">
+              <div class="card__price">
+                <span class="amount">{{price}}</span>
+                <span class="currency">сум</span>
+              </div>
+              <div class="flex-button d-flex align-center">
+                <button class="card__btn" data-price="19999">Купить</button>
+                <button class="card__btn-st" data-price="19999"> <a href="/add/{{id}}/edit">Edit</a></button>
               </div>
             </div>
-          {{/each}}
+            <div class="card__labels label">
+              <img class="label__img" src="img/std.png" alt="png" />
+            </div>
+          </div>
+        </div>
+        <!-- MODAL START -->
+        <div class="modal">
+          <div class="modal__content">
+            <div class="modal__top">
+              <img class="top__img" src="{{img}}" alt="jpg" />
+            </div>
+            <div class="modal__bottom bottom">
+              <div class="bottom__left">
+                <div class="card__name modal__name">{{name}}</div>
+                <span class="attr" style="display: none;"></span>
+                <div class="card__price modal__price">
+                  <span class="amount modal__amount">{{price}}</span>
+                  <span class="currency">сум</span>
+                </div>
+                <div class="modal__quantity quantity">
+                  <span class="modal__span">Количество:</span>
+                  <div class="quantity__block">
+                    <button class="quantity__minus">-</button>
+                    <span class="quantity__show">1</span>
+                    <button class="quantity__pilus">+</button>
+                  </div>
+                </div>
+                <div class="modal__quantity pay">
+                  <span class="modal__span">Всего:</span>
+                  <div class="pay__right">
+                    <span class="pay__amount">{{price}}</span>
+                    <span class="currency">сум</span>
+                  </div>
+                </div>
+                <form action="/card/add" method="POST">
+                  <input type="hidden" value="{{id}}" name="id">
+                  <div class="modal__action">
+                    <button class="buttnn">Купить</button>
+                  </div>
+                </form>
+              </div>
+              <div class="bottom__right">
+                <img class="bottom__img" src="img/about.jpg" alt="jpg" />
+              </div>
+            </div>
+            <span class="modal__close"></span>
+          </div>
+        </div>
+        <!-- MODAL END -->
+        {{/each}}
         {{else}}
-          <p> here is empty</p>
+        <p> here is empty</p>
         {{/if}}
       </div>
     </div>
-    <!-- MODAL START -->
-    <div class="modal">
-      <div class="modal__content">
-        <div class="modal__top">
-          <img class="top__img" src="img/burger1.jpg" alt="jpg" />
-        </div>
-        <div class="modal__bottom bottom">
-          <div class="bottom__left">
-            <div class="card__name modal__name">Гамбургер</div>
-            <span class="attr" style="display: none;"></span>
-            <div class="card__price modal__price">
-              <span class="amount modal__amount">19 999 </span>
-              <span class="currency">сум</span>
-            </div>
-            <div class="modal__quantity quantity">
-              <span class="modal__span">Количество:</span>
-              <div class="quantity__block">
-                <button class="quantity__minus">-</button>
-                <span class="quantity__show">1</span>
-                <button class="quantity__pilus">+</button>
-              </div>
-            </div>
-            <div class="modal__quantity pay">
-              <span class="modal__span">Всего:</span>
-              <div class="pay__right">
-                <span class="pay__amount">19 999</span>
-                <span class="currency">сум</span>
-              </div>
-            </div>
-            <div class="modal__action">
-              <button class="modal__btn">Купить</button>
-            </div>
-
-          </div>
-          <div class="bottom__right">
-            <img class="bottom__img" src="img/about.jpg" alt="jpg" />
-          </div>
-        </div>
-        <span class="modal__close"></span>
-      </div>
-    </div>
-    <!-- MODAL END -->
 
   </div>
 </section>
@@ -172,32 +175,22 @@
         <ul class="payment__card-count count">
           <li class="count__box">
             1
-          </li>
-          <li class="count__box">
-            1
-          </li>
-          <li class="count__box">
-            1
+
+
           </li>
         </ul>
       </li>
       <li class="payment__card-list">
         <ul class="products__list-price">
-          <li class="products__list-amount amountbox"><span
-              class="amountbox__item"
-            >20000</span>
+          <li class="products__list-amount amountbox"><span class="amountbox__item">20000</span>
             <span class="amount__currency">
               сум</span>
           </li>
-          <li class="products__list-amount amountbox"><span
-              class="amountbox__item"
-            >22000</span>
+          <li class="products__list-amount amountbox"><span class="amountbox__item">22000</span>
             <span class="amount__currency">
               сум</span>
           </li>
-          <li class="products__list-amount amountbox"><span
-              class="amountbox__item"
-            >25000</span>
+          <li class="products__list-amount amountbox"><span class="amountbox__item">25000</span>
             <span class="amount__currency">
               сум</span>
           </li>
@@ -229,14 +222,10 @@
     </div>
     <h5 class="thanks">Спасибо за покупку</h5>
     <div class="payment__btns">
-      <button class="pay__btn"><img
-          class="pay__btn__img"
-          src="img/Metro-Loading-32.png"
-          alt="png"
-        />
+      <button class="pay__btn"><img class="pay__btn__img" src="img/Metro-Loading-32.png" alt="png" />
         <span class="pay__btn__span">оплатить</span></button>
       <button class="back__btn">назад</button>
-      <a href="index.html" id="menu" style="display: none;">Меню</a>
+      <a href="/" id="menu" style="display: none;">Меню</a>
     </div>
   </div>
 </section>

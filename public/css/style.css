@@ -306,17 +306,34 @@ h1 {
   height: 100%;
 }
 
+.input-field {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box-adit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .card__name {
   font-size: 30px;
   margin-bottom: 25px;
   font-weight: 700;
-  height: 75px;
+  height: 42px
 }
 
 .card__text {
   font-size: 16px;
   font-weight: 300 !important;
-  height: 115px;
+  height: 85px;
 }
 
 .card__actions {
@@ -353,7 +370,33 @@ h1 {
   transition: all ease-in-out 0.2s;
 }
 
+.card__btn-st {
+  color: white;
+  background: #000000;
+  border: 2px solid #b63344;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 5px red;
+  transition: all ease-in-out 0.2s;
+}
+
+.card__btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.card__btn-st a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .card__btn:hover {
+  box-shadow: 0 0 5px white;
+  border-color: white;
+}
+
+.card__btn-st:hover {
   box-shadow: 0 0 5px white;
   border-color: white;
 }
@@ -477,7 +520,7 @@ h1 {
 
 .pay__amount {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 21px;
   letter-spacing: 2px;
 }
 
@@ -1493,6 +1536,7 @@ footer {
   text-align: center;
   border-bottom: 1px solid;
 }
+
 .row .m-auto h6 {
   font-size: 23px;
   font-weight: 700;
@@ -1502,22 +1546,29 @@ footer {
   border-bottom: 1px solid;
 }
 
-.validate{
+.validate {
   width: 71%;
+  margin-bottom: 11px;
+  margin-top: 11px;
 }
 
-.row .blockrow{
+.row .blockrow {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.waves-effect{
+.waves-effect {
   background-color: azure;
   border-radius: 5px;
   border: 1px solid;
   width: 65px;
+}
+
+.flex-button {
+  width: 100%;
+  justify-content: space-around;
 }
 
 /* MEDIA END */
